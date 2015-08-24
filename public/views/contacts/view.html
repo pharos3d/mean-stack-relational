@@ -1,0 +1,14 @@
+<section data-ng-controller="ContactsController" data-ng-init="findOne()">
+    <span>{{contact.updatedAt | date:'medium'}}</span>/
+    <span>{{contact.user.name}}</span>
+    <h2>{{contact.title}}</h2>
+    <div data-ng-show="global.user.id == contact.user.id">
+        <a class="btn" href="/#!/contacts/{{contact.id}}/edit">
+        	<i class="icon-edit"></i>
+        </a> 
+        <a class="btn" data-ng-click="remove();">
+            <i class="icon-trash"></i>
+        </a>
+    </div>
+    <div>{{contact.content}}</div>
+</section>

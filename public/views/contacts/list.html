@@ -1,0 +1,11 @@
+<section data-ng-controller="contactsController" data-ng-init="find()">
+	<ul class="contacts unstyled">
+		<li data-ng-repeat="contact in contacts">
+			<span>{{contact.updatedAt | date:'medium'}}</span> /
+			<span>{{contact.user.name}}</span>
+			<h2><a data-ng-href="#!/contacts/{{contact.id}}">{{contact.title}}</a></h2>
+			<div>{{contact.content}}</div>
+		</li>
+	</ul>
+	<h1 data-ng-hide="!contacts || contacts.length">No contacts yet. <br> Why don't you <a href="/#!/contacts/create">Create One</a>?</h1>
+</section>
