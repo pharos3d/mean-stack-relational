@@ -1,0 +1,17 @@
+<section data-ng-controller="campsController" data-ng-init="find()">
+	<ul class="camps unstyled">
+		<li data-ng-repeat="camp in camps">
+			<span>{{camp.updatedAt | date:'medium'}}</span> /
+			<span>{{camp.user.name}}</span>
+			<h2><a data-ng-href="#!/camps/{{camp.id}}">{{camp.title}}</a></h2>
+			<div>{{camp.description}}</div>
+			<div>{{camp.size}}</div>
+			<div>{{camp.address}}</div>
+			<div>{{camp.telephone}}</div>
+			<div>{{camp.email}}</div>
+			<div>{{camp.url}}</div>
+			<div><a href="{{camp.facebook}}">{{camp.facebook}}</a></div>
+		</li>
+	</ul>
+	<h1 data-ng-hide="!camps || camps.length">No camps yet. <br> Why don't you <a href="/#!/camps/create">Create One</a>?</h1>
+</section>

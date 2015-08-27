@@ -1,0 +1,14 @@
+<section data-ng-controller="campsController" data-ng-init="findOne()">
+    <span>{{camp.updatedAt | date:'medium'}}</span>/
+    <span>{{camp.user.name}}</span>
+    <h2>{{camp.title}}</h2>
+    <div data-ng-show="global.user.id == camp.user.id">
+        <a class="btn" href="/#!/camps/{{camp.id}}/edit">
+        	<i class="icon-edit"></i>
+        </a> 
+        <a class="btn" data-ng-click="remove();">
+            <i class="icon-trash"></i>
+        </a>
+    </div>
+    <div>{{camp.content}}</div>
+</section>

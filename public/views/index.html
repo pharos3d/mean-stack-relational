@@ -1,3 +1,16 @@
 <section data-ng-controller="IndexController">
-	<h1>This is the home view</h1>
+	<div class="well">
+		<div data-ng-hide="global.authenticated">
+			<h1>Welcome!</h1>
+	    	You are a refugee-helper? Connect yourself with other helpers here!
+			<a href="signup" class="btn btn-info">registration</a>
+			<a href="signin" class="btn btn-info">login</a>
+
+	    </div>
+    	<div data-ng-show="global.authenticated">
+			<h1>Welcome {{global.user.name}}!</h1>
+			<a href="/signout">Signout</a>
+            
+        </div>
+	</div>
 </section>

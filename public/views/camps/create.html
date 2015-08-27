@@ -1,0 +1,59 @@
+<section data-ng-controller="campsController">
+	<form class="form-horizontal" data-ng-submit="create()">
+
+
+		<div class="control-group">
+			<label class="control-label" for="title">Title</label>
+
+			<div class="controls">
+				<input type="text" data-ng-model="camp.title" id="title" placeholder="Title" required>
+				</input>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="description">Description</label>
+
+			<div class="controls">
+				<textarea data-ng-model="camp.description" id="description" cols="30" rows="10" placeholder="Description">
+				</textarea>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="address">Address</label>
+
+			<div class="controls">
+				<textarea data-ng-model="camp.address" id="address" cols="30" rows="10" placeholder="Address">
+				</textarea>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="size">Size</label>
+
+			<div class="controls">
+				<input type="text" data-ng-model="camp.size" id="size" placeholder="Size" required>
+				</input>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="telephone">Telephone</label>
+
+			<div class="controls">
+				<input type="text" data-ng-model="camp.telephone" id="telephone" placeholder="Telephone" required>
+				</input>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="email">E-Mail</label>
+
+			<div class="controls">
+				<input type="text" data-ng-model="camp.email" id="email" placeholder="E-Mail" required>
+				</input>
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<input type="submit" class="btn">
+			</div>
+		</div>
+	</form>
+</section>

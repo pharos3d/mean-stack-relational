@@ -20,11 +20,23 @@ angular.module('mean').config(['$routeProvider',
         when('/contacts/create', {
             templateUrl: 'views/contacts/create.html'
         }).
-        when('/contacts/:articleId/edit', {
+        when('/contacts/:contactId/edit', {
             templateUrl: 'views/contacts/edit.html'
         }).
-        when('/contacts/:articleId', {
+        when('/contacts/:contactId', {
             templateUrl: 'views/contacts/view.html'
+        }).
+        when('/camps', {
+            templateUrl: 'views/camps/list.html'
+        }).
+        when('/camps/create', {
+            templateUrl: 'views/camps/create.html'
+        }).
+        when('/camps/:campId/edit', {
+            templateUrl: 'views/camps/edit.html'
+        }).
+        when('/camps/:campId', {
+            templateUrl: 'views/camps/view.html'
         }).
         when('/', {
             templateUrl: 'views/index.html'
